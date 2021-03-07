@@ -5,8 +5,9 @@
         {% for post in posts %}
             <div class='card mt-4 mb-4'>
               <p class="card-header">
-                <span class="strong text-primary"> {{ post.Author }} </span>  
-                posted on  <span class="text-muted" > {{ post.date}} </span> 
+                <span class="strong text-primary"> {{ post.author }} </span>  
+                <!-- posted on  <span class="text-muted" > {{ post.date_posted}} </span>  -->
+                posted on  <span class="text-muted" > {{ post.date_posted|date:"F d, Y"}} </span> 
               </p>
               <h1 class="card-body">
                   <span class="bold fs-2"> {{ post.title }} </span>  

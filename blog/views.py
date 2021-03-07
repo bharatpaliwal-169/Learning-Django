@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-
+from .models import Post
 
 # data from database
 
@@ -22,7 +22,8 @@ fake_posts = [
 
 def home(request):
   context = {
-    'posts' : fake_posts
+    # 'posts' : fake_posts
+    'posts' : Post.objects.all(),
   }
   return render(request, 'blog/home.html',context)   
 
