@@ -55,10 +55,15 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-12 col-sm-8 offset-sm-1">
+        {% if messages %}
+          {% for message in messages %}
+            <div class="alert alert-{{message.tags}}"> {{message}} </div>
+          {% endfor %}
+        {% endif %}
         {% block content %}{% endblock %}
       </div>
 
-      <div class="col-sm-3 d-none d-md-block  mt-5">
+      <div class="col-sm-3 d-none d-md-block">
         <ul class="list-group mt-5 display-sidebar">
           <h5>Our Sidebar</h5>
           <p>Place your information here</p>
