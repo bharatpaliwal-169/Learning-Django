@@ -1,0 +1,9 @@
+{% extends "blog/base.html" %}
+  {% block content %}
+  <div class="col-12 text-center mt-5 mb-5 display-3">
+    Logged Out
+  </div>
+  <div class="col-12 text-center display-5 mt-5">
+      <a href="{% url 'login' %}" class="btn btn-lg btn-primary" > Login again  </a> 
+  </div>
+  {% endblock content %}
