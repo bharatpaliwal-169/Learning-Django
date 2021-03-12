@@ -1,4 +1,17 @@
 {% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
   {% block content %}
-    <h1> {{user.username}} </h1>
+  <div class="card mb-3 mt-4" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-4 col-sm-4">
+        <img class="img-fluid"  src="{{ user.profile.image.url }}">
+      </div>
+      <div class="col-7 col-sm-7">
+        <div class="card-body">
+          <h2 class="fs-4">{{ user.username }}</h2>
+          <p class="text-secondary">{{ user.email }}</p>
+        </div>
+      </div>
+    </div>
+  </div>  
   {% endblock content %}
