@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from .models import Post
 
+from django.views.generic import ListView,DetailView
 # data from database
 
 fake_posts = [
@@ -29,3 +30,13 @@ def home(request):
 
 def about(request):
   return render(request, 'blog/about.html')
+
+
+class PostListView(ListView):
+  model = Post
+  template_name = 'blog/home.html'
+  context_object_name = 'posts'
+  ordering = ['-date_posted']
+
+class PostDetailView(DetailView):
+  model = Post

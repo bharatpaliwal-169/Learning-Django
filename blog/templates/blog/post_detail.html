@@ -1,0 +1,17 @@
+{% extends "blog/base.html" %}
+  {% block content %}
+  <div class="container">
+    <div class="row">
+      <article class='col-12 col-sm-8 text-center'>
+        <h1 class="display-3">
+          <span class="bold"> {{ object.title }} </span>  
+        </h1>
+      
+        <p style="font-family:'Times New Roman', Times, serif; padding-left: 15px;">
+          {{object.content}}
+        </p>
+      </article>
+    </div>
+  </div>
+  {% endblock content %}
+  

@@ -4,3 +4,9 @@
   font-weight: 500;
   border-radius: 7px;
 }
+
+.prof-image{
+  height:40px;
+  width:40px;
+  border-radius: 50%;
+}

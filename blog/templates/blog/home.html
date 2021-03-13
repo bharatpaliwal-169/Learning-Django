@@ -5,12 +5,15 @@
         {% for post in posts %}
             <div class='card mt-4 mb-4'>
               <p class="card-header">
+                <!-- <span class='img-fluid img-responsive rounded-circle'></span> -->
+                  <img src="{{post.author.profile.image.url}}" alt="{{post.author.name}}" class="prof-image">
+                <!-- </span>  -->
                 <span class="strong text-primary"> {{ post.author }} </span>  
                 <!-- posted on  <span class="text-muted" > {{ post.date_posted}} </span>  -->
                 posted on  <span class="text-muted" > {{ post.date_posted|date:"F d, Y"}} </span> 
               </p>
               <h1 class="card-body">
-                  <span class="bold fs-2"> {{ post.title }} </span>  
+                  <span class="bold fs-2"> <a href="{% url 'Post_details' post.id %}">{{ post.title }} </a> </span>  
               </h1>
               <p style="font-family:'Times New Roman', Times, serif; padding-left: 15px;">{{post.content}}</p>
             </div>
