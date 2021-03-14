@@ -2,7 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from .models import Post
 
-from django.views.generic import ListView,DetailView
+from django.views.generic import ListView,DetailView,CreateView
 # data from database
 
 fake_posts = [
@@ -40,3 +40,9 @@ class PostListView(ListView):
 
 class PostDetailView(DetailView):
   model = Post
+
+
+class PostCreateView(CreateView):
+  model = Post
+  fields = ['title', 'content']
+
