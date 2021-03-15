@@ -10,3 +10,33 @@
   width:40px;
   border-radius: 50%;
 }
+
+.blog-head{
+  text-decoration: none!important;
+  color: rgb(75, 75, 75)!important;
+  padding: 10px;
+  
+  text-underline-position: none !important;
+}
+.blog-head:hover{
+  text-decoration: none;
+  color: rgb(121, 121, 121)!important;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: darkgrey; 
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(114, 114, 114); 
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}

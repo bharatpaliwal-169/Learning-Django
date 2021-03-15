@@ -2,14 +2,18 @@
   {% block content %}
   <div class="container">
     <div class="row">
-      <article class='col-12 col-sm-8 text-center'>
-        <h1 class="display-3">
+      <article class='col-12 col-sm-8'>
+        <h1 class="display-3 text-center">
           <span class="bold"> {{ object.title }} </span>  
         </h1>
-      
-        <p style="font-family:'Times New Roman', Times, serif; padding-left: 15px;">
+        <p class="fs-6 text-muted"> <span> <i class="fas fa-user-edit"></i> </span>  {{ object.author }}</p>
+        <p style="font-family:'Times New Roman',serif; padding-left: 15px; margin-top: 20px; border-top: 1px solid #232c34;">
           {{object.content}}
         </p>
+        {% if object.author == user %}
+          <a href="{% url 'post-update' object.id %}" class="btn btn-outline-primary btn-lg"> Update </a>
+          <a href="{% url 'post-delete' object.id %}" class="btn btn-outline-danger btn-lg"> Delete </a>
+        {% endif %}
       </article>
     </div>
   </div>

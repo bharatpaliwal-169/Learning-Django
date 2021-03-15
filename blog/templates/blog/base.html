@@ -8,6 +8,7 @@
   
   
   <!-- css -->
+  <script src="https://kit.fontawesome.com/e7dd9416fd.js" crossorigin="anonymous"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <link rel="stylesheet" href="{% static 'blog/main.css' %}">
   
@@ -38,6 +39,10 @@
           <!-- right side -->
         <div class="navbar-nav">
           {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link btn btn-primary btn-md" href="{% url 'post-create' %}">Add Post</a>
+            </li>
+
             <li class="nav-item">
               <a class="nav-link" href="{% url 'profile' %}">Profile</a>
             </li>
